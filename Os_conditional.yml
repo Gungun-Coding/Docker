@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install apache on ubuntu
+    apt: name=apache2 state=present
+    when: ansible_os_family == "Debian"
+    ignore_errors: true
+
+  - name: Install apache on red hat
+    yum: name=apache2 state=present
+    when: ansible_os_family == "RedHat"
+    ignore_errors: true
