@@ -1,0 +1,17 @@
+$terraform workspace new dev                    - #to create new workspace 
+
+$terraform workspace list                       - #to get all present workspaces
+
+$terraform workspace select dev                 - #to switch to perticular workspace
+
+$terraform state list                           - # to get all resource list
+
+$terraform state show -json <resource>          - # to see all the resource list in json format
+
+$terraform state rm <resource>                  - # to remove a perticular resource from state file without affecting the infra
+
+$terraform state pull                            - #download and print the current state file
+
+$terraform state push <state-file>               - #recovery
+
+$terraform state replace-provider <old> <new>    - #provider migration, fixed broken provider refernce
